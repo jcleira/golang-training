@@ -1,0 +1,128 @@
+Golang training #1
+Tooling and basics
+24 Apr 2016
+Tags: training, introduction, core, vars, types, interfaces
+
+Jose Corral
+For Backend & Devops, Kerad Games
+jose.corral@keradgames.com
+http://www.keradgames.com
+@jcleira
+
+* golang language objectives 
+- Be statically typed, scalable to large systems (as Java and C++).
+- Be productive and readable, without too many mandatory keywords and repetition.
+- Not require tooling, but support it well.
+- Support networking and multiprocessing.
+.image audi.gif
+
+* golang language design
+
+A syntax and environment adopting patterns more common in dynamic languages.
+
+- Optional concise variable declaration and initialization through type inference 
+  x := 0 // not int x = 0;
+- Fast compilation times.
+- Remote package management (go get) and online package documentation.
+
+.image golang.gif
+
+* golang language design
+
+Distinctive approaches to particular problems.
+
+- Built-in concurrency primitives: light-weight processes (goroutines), channels, and the select statement.
+- An interface system in place of virtual inheritance, and type embedding instead of non-virtual inheritance.
+- Toolchain that produces statically linked native binaries without external deps.
+
+.image approaches.gif
+
+* Tooling - gofmt - https://golang.org/cmd/gofmt/
+
+No more "Where the curly braces should go"
+
+.image gofmt.gif
+
+* Tooling - go get - https://golang.org/cmd/go/
+
+- Built-in package management.
+
+    go get [-d] [-f] [-fix] [-insecure] [-t] [-u] [build flags] [packages]
+
+- Get downloads and installs the packages named by the import paths, along with their dependencies.
+
+- The -u flag instructs get to use the network to update the named packages and their dependencies.
+
+.image goget.gif
+
+* Tooling - go-vim - https://github.com/fatih/vim-go
+
+Third party opensourced vim plugin.
+
+.image vim-go.png
+
+* Tooling - goimports - godoc.org/golang.org/x/tools/cmd/goimports
+
+Trust me, don't go golang without that.
+
+.image goimports.gif
+
+* Tooling - present - https://godoc.org/golang.org/x/tools/present
+
+Where this presentation is made on.
+
+.image present.jpeg
+
+* Tooling - godep - https://github.com/tools/godep
+
+Dependency management in go.
+
+    "The minimal expression about what you need to run the code, it's having all the code you need"
+
+.image godep.png
+
+* Language principles - vars, arrays, maps
+
+.play vars_arrays_maps.01.go
+
+* Language principles - structs
+
+.play structs.01.go
+
+* Language principles - structs
+
+.code structs.02.go
+
+* Language principles - functions
+
+.play functions.01.go
+
+* Language principles - functions
+
+.play functions.02.go
+
+* Language principles - functions
+
+.play functions.03.go
+
+* Language principles - interfaces 
+
+.play interfaces.01.go
+
+* Language principles - interfaces
+
+.code interfaces.02.go
+
+* Language principles - interfaces
+
+.code interfaces.03.go
+
+* Next class....
+
+Topic:
+
+    kg-maldini use case.
+
+Requirements:
+
+   Get the tooling installed.
